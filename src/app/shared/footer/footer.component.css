@@ -1,0 +1,36 @@
+footer {
+    width:100%;
+    padding:20px 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #090909;
+    color:white;
+    font-weight: 400;
+}
+ul li {
+    list-style-type: none;
+    align-items: center;
+}
+a,p :hover {
+    color:#F86600;
+}
+.sec {
+    width: 30%; /* Adjust the width as needed */
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 20px;
+  }
+/* Media query for smaller screens */
+@media screen and (max-width: 767px) {
+  footer {
+        flex-direction: column; /* Stack the sections vertically */
+        align-items: center; /* Center align the sections */
+    }
+
+    .sec {
+      margin: 20px;
+      width:100%;
+      align-items: center;
+      text-align: center; /* Optionally, for horizontal centering */
+    }
+  }

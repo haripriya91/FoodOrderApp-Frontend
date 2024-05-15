@@ -1,0 +1,17 @@
+.tag-section {
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+   /* height: 50vh; */
+    border-bottom: 1px #000;
+    margin-top:10px;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: #000;
+    padding-left: 15px;
+    margin: 20px;
+}

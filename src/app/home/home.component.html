@@ -1,0 +1,10 @@
+<ul>
+    @for (food of foods; track food.imageUrl) {
+        <li>
+            <a><img src="{{ food.imageUrl }}" alt="" width="100%"></a>
+        </li>
+    } @empty {
+        <div class="center-align">No Food found..</div>       
+    }
+   
+</ul>

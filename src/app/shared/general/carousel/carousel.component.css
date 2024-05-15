@@ -1,0 +1,76 @@
+
+ /* Style for round image thumbnails
+ .slick-track
+ {
+     display: flex !important;
+ }
+ 
+ .slick-slide
+ {
+     height: inherit !important;
+ }
+.thumbnail {
+  width: 60px;
+  height: 60px;
+  -webkit-border-radius: 60px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 60px;
+  -moz-background-clip: padding;
+  border-radius: 60px;
+  background-clip: padding-box;
+  margin: 7px 0 0 5px;
+  float: left;
+  background-size: cover;
+  background-position: center center;
+} */
+   /* Style for the carousel container */
+   .slick-carousel {
+    width: 100%; /* Adjust the width of the carousel */
+    margin: auto; /* Center the carousel */
+  }
+
+  /* Style for individual carousel items (slides) */
+  .slick-slide {
+    margin: 0 5px; /* Adjust margin between slides */
+  }
+
+ /* Style for container holding image and name */
+ .slide-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center-align {
+  text-align : center;
+  margin-bottom: 10px;
+}
+
+/* Style for small and rounded images inside carousel items */
+.slide-container.round img {
+  width: 50%; /* Adjust the width of the image */
+  height: 50%; /* Adjust the height of the image */
+  border-radius: 50%; /* Make the image round */
+  overflow: hidden; /* Hide any overflow beyond the rounded border */
+  margin-bottom: 5px; /* Add spacing between image and name */
+}
+
+/* Style for small and square images inside carousel items */
+.slide-container.square img {
+  width: 80%; /* Adjust the width of the image */
+  height: 50%; /* Adjust the height of the image */
+  overflow: hidden; /* Hide any overflow beyond the rounded border */
+  margin: 10px; /* Add spacing between image and name */
+}
+
+@media screen and (max-width: 757px) {
+
+  .slide-container.square img {
+    width: 80%; /* Adjust the width of the image */
+    height: 30%; /* Adjust the height of the image */
+    overflow: hidden; /* Hide any overflow beyond the rounded border */
+    margin: 10px; /* Add spacing between image and name */
+  }
+  
+}
+

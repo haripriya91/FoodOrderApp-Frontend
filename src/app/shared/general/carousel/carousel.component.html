@@ -1,0 +1,24 @@
+<!-- <ngx-slick-carousel [config]="slideConfig">
+    <div ngxSlickItem *ngFor="let slide of slides">
+      <img [src]="slide" alt="Slide">
+    </div>
+  </ngx-slick-carousel> -->
+  <div class="">
+    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig" >
+          @for (slide of slides; track slide.imageUrl) {
+              <div ngxSlickItem class="slide-container  slide " [ngClass]="imgType">
+                <img src="{{ slide.imageUrl }}" alt="" width="100%">
+                <p>{{ slide.name }}</p>
+              </div>
+          } @empty {
+            @if(sliderType =='restaurantList') {
+              <div class="center-align">No restaurants found..</div>
+             } @else if(sliderType =='tagList') {
+               <div class="center-align">No tags found..</div>
+             }  @else {   
+              <div class="center-align"> No slides found...</div>
+             }
+          }
+    </ngx-slick-carousel>
+  </div>  
+

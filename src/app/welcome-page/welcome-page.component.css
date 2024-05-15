@@ -1,0 +1,116 @@
+
+.loading-spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+.banner {
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60vh;
+    background: url(../../assets/images/vegetables-set-left-black-slate.jpg);
+    background-size: cover;
+}
+
+h3 {
+    font-size: 2em;
+    color: #fff;
+    text-shadow: 0 0 30px #000;
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #F86600;
+    text-shadow: 0 0 30px #000;
+    padding-left: 30px;
+    width: 50%;
+}
+
+.button-20 {
+    appearance: button;
+    background-color: #000;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, 0));
+    border: 1px solid #000;
+    border-radius: 1rem;
+    box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset, rgba(46, 54, 80, 0.075) 0 1px 1px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: 500;
+    line-height: 1.5;
+    display: block;
+    margin: 15px 30px;
+    padding: .5rem 1rem;
+    text-align: center;
+    text-transform: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 20%;
+
+}
+
+.xl-text {
+    display: block;
+}
+
+@media screen and (min-width: 767px) {
+    .small-text {
+        display: none;
+    }
+}
+
+
+
+/* Media query for smaller screens */
+@media (max-width: 767px) {
+
+    .banner {
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        height: 40vh;
+        background: url(../../assets/images/vegetables-set-left-black-slate.jpg);
+        background-size: cover;
+    }
+
+    h3 {
+        font-size: 1.2em;
+        color: #fff;
+        text-shadow: 0 0 30px #000;
+        padding-left: 30px;
+        margin-bottom: 20px 0px;
+    }
+
+    .xl-text {
+        display: none;
+    }
+
+    .button-20 {
+        width: 20%;
+        margin: 15px 25px;
+    }
+
+    .small-text {
+        display: block;
+        font-size: 0.9em;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: #F86600;
+        text-shadow: 0 0 30px #000;
+        padding-left: 30px;
+        width: 50%;
+    }
+}

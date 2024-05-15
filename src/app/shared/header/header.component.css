@@ -1,0 +1,122 @@
+header {
+    background-color:  #090909;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    /* border-bottom: 1px solid #F86600; */
+    width:100%;  
+}
+
+a {
+    color:#ffffff;
+}
+
+a:hover {
+    color:#F86600;
+}
+
+.homelogo {
+    font-size: 20px;
+    font-weight: bold;
+    color:#F86600;
+}
+
+.homelogo img {
+    vertical-align: middle; /* Align the image vertically to the middle */
+    margin-right: 5px; /* Add some spacing between the image and text */
+    width: 30px;
+}
+
+
+
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin-left: 50px;
+}
+
+nav ul li a{
+    padding: 5px 10px;
+    font-weight: 400;
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+    display: none;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-icon {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+
+/* Media query for smaller screens */
+@media screen and (max-width: 767px) {
+    .menu {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    #menu-icon {
+        color: #fff;
+    }
+
+    #menu-toggle:checked + .mobile-nav {
+        display: block;
+    }
+
+    .mobile-nav {
+        flex-direction: column;
+        position: absolute;
+        top: 65px;
+        right: 0;
+        background-color: #090909;
+        color: #fff;
+        width: 80%;
+    }
+
+    ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    li {
+        margin: 10px 0;
+    }
+    a:active {
+        color:#F86600;
+    }
+    .close-icon{
+        padding: 20px;
+
+    }
+    .content {
+        /* Styles for your main content area */
+        padding: 20px;
+        background-color: #f0f0f0;
+        transition: filter 0.3s ease; /* Add transition for smooth effect */
+    }
+  }
