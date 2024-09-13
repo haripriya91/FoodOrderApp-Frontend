@@ -1,4 +1,4 @@
 <section class="tag-section">
-    <h3>What's on your mind?</h3>
-    <app-carousel [slides]="tags" [sliderType]="sliderType" [imgType]="imgType"></app-carousel>
+    <h3 [ngClass]="h3Class">What's on your mind?</h3>
+    <app-carousel [slides]="tags" [sliderType]="sliderType" [imgType]="imgType" [sliderCount]="sliderCount" (imageClick)="onImgCick($event)"></app-carousel>
 </section>

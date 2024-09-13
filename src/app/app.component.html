@@ -1,3 +1,6 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
+<app-header [isHidden]="hideMainHeader"></app-header>
+<app-sub-header [isVisible]="showSubHeader"></app-sub-header>
+<div class="main-content" appScroll (scrollDown)="scrolldown()" (scrollUp)="scrollup()" (reachedTop)="onReachedTop()">
+    <router-outlet></router-outlet>
+</div>
 <app-footer></app-footer>

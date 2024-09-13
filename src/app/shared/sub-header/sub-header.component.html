@@ -1,0 +1,32 @@
+<div class="subheader" [ngClass]="{'visible' : isVisible}">
+    <div class="subheader-content">
+        <div class="filter-sort">
+            <div class="filter-by">
+                <label for="filter">Filter By</label>
+                <select id="filter">
+                    <option value="all"></option>
+                    <option value="category1">category1</option>
+                    <option value="category2">category2</option>
+                    <option value="category3">category3</option>
+                </select>
+            </div>
+            <div class="sort-by">
+                <label for="sort">Sort By</label>
+                <select id="sort">
+                    <option value="Popularity">Popularity</option>
+                    <option value="LowToHigh">Low to High</option>
+                    <option value="HighToLow">High to Low</option>
+                    <option value="CustomerRating">Customer Rating</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search Item" />
+        </div>
+
+
+    </div>
+</div>

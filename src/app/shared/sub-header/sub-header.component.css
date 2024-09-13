@@ -1,0 +1,25 @@
+.subheader{
+    background-color:  #090909;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    width:100%;
+    position: fixed;
+    top:0;
+    z-index: 1;  
+    transform: translateY(-100%);
+}
+.subheader.visible {
+    transform: translateY(0);
+}
+.subheader-content {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.filter-sort {
+    display: inline-flex;
+}
+
+
+

@@ -9,9 +9,16 @@
     margin-top:10px;
 }
 
-h3 {
+/* styles.css or relevant component CSS */
+.welcome-h3 {
     font-size: 1.5em;
     color: #000;
     padding-left: 15px;
     margin: 20px;
-}
+  }
+  
+  .home-h3 {
+    font-size: 1.7em !important;
+    color: #000  !important;
+    margin: 20px 0  !important;
+  }

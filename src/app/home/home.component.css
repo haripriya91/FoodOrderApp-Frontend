@@ -1,5 +1,9 @@
 
-ul {
+
+.home-container {
+    margin-top : 2.4rem;
+}
+.home-items ul {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,7 +12,7 @@ ul {
     padding:0;
 }
 
-ul li a{
+.home-items ul li a{
     height: 20rem;
     width:20rem;
     border: 1px solid whitesmoke;
@@ -18,4 +22,169 @@ ul li a{
     flex-direction: column;
     overflow:hidden;
     color:brown;
+}
+
+.home-items li a:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.mobile-search-content {
+    display:none;
+}
+
+.basic-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+
+  }
+  
+  .name {
+    flex: 1; /* Take up remaining space */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Show ellipsis for overflow */
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+  
+  .favorite {
+    flex-shrink: 0; /* Do not shrink the favorite icon */
+    margin-left: auto; /* Push the favorite icon to the right */
+    white-space: nowrap; /* Prevent icon from wrapping */
+  }
+  
+  .favorite.not {
+    color: gray; /* Example style for not favorite */
+  }
+
+  .more-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    color:#B75454;
+  }
+
+  .cooking-time {
+    flex: 1; /* Take up remaining space */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Show ellipsis for overflow */
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+
+  .price + .fa-wallet, .cooking-time + .fa-timer {
+    color:#B75454;
+  }
+    /* Override Colors by using style rules */
+   .contents .rating.color-negative .star-container .star {
+        svg {
+          fill: #FFC058;
+        }
+        i {
+          color: #FFC058;
+        }
+      }
+      
+    .contents  .rating.color-ok .star-container .star {
+        svg {
+          fill: #FFC058;
+        }
+        i {
+          color: #FFC058;
+        }
+      }
+      
+     .contents .rating.color-positive .star-container .star {
+        svg {
+          fill: #FFC058;
+        }
+        i {
+          color: #FFC058;
+        }
+      }
+      
+      .rating.color-default .star-container .star {
+        svg {
+          fill: #FFC058;
+        }
+        i {
+          color: #FFC058;
+        }
+      }
+      
+    .contents div.rating{
+        justify-content: left !important;
+    }
+
+    .origins {
+        padding-left: 0.5rem;
+    }
+
+    h1 {
+      margin: 0 0 0 16px;
+      padding-top: 10px;
+    }
+/* Mobile menu styles */
+@media (max-width: 768px) {
+    .mobile-search-content {
+        display:block;
+    }
+
+    .mobile-searchbar {
+        color: #000;
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+        border: 1px solid #ccc; /* Optional: for better visibility */
+        padding: 5px; /* Optional: for better spacing */
+        border-radius: 5px; /* Optional: for a rounded look */
+        background-color: orange;
+    }
+    .mobile-search-content.fixed {
+        position: fixed;
+        width:100%;
+
+    }
+    .home-items {
+        margin-top: 10px;   
+    }
+    .filter-by{
+        font-size: 22px; /* Adjust icon size */
+        color: #000; /* Adjust icon color */
+        margin-left:10px;
+    }
+
+    .search-box {
+        flex: 1; /* Allow the input to take up the remaining space */
+        padding: 8px; /* Add padding for better user experience */
+    }
+
+    /* code to add search icon inside input field */
+
+    .search-box-container {
+        position: relative;
+        flex: 1; /* Allow the input to take up the remaining space */
+
+    }
+    
+    .search-box {
+        width: 100%;
+        border: none; /* Remove default border */
+        outline: none; /* Remove default outline */
+        padding: 8px 8px 8px 30px; /* Add padding for better user experience and space for the icon */
+        font-size: 12px; /* Increase font size */
+        margin: 5px;
+    }
+
+    .search-box + .fa-search {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #aaa; /* Adjust icon color */
+        font-size: 16px; /* Adjust icon size */
+    }
+    
+
 }

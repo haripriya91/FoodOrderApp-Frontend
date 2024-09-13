@@ -3,7 +3,14 @@ header {
     padding: 20px 10px;
     box-sizing: border-box;
     /* border-bottom: 1px solid #F86600; */
-    width:100%;  
+    width:100%;
+    position: fixed;
+    top:0;
+    z-index: 1;  
+}
+
+header.hidden {
+    transform: translateY(-100%);
 }
 
 a {
@@ -78,6 +85,7 @@ nav ul li a{
 
     .mobile-menu {
         display: block;
+        z-index: 10;
     }
 
     #menu-icon {
@@ -120,3 +128,52 @@ nav ul li a{
         transition: filter 0.3s ease; /* Add transition for smooth effect */
     }
   }
+
+
+  .social {
+    top:64%;
+    position: fixed;
+    left:0;
+    z-index: 1;
+    width:4vw;
+    height:auto;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .social i {
+    font-size: 4vw;
+    margin-bottom: 2vh; 
+  }
+
+  .social i:last-child{
+    margin-bottom: 0; 
+  }
+  /* Media queries for different screen sizes */
+@media (max-width: 600px) {
+    .social {
+        top:72%;
+        width: 10vw;  /* Adjust the width for smaller screens */
+    }
+
+    .social i {
+        font-size: 8vw;  /* Increase the font size for smaller screens */
+        margin-bottom: 4vh;  /* Adjust spacing for smaller screens */
+    }
+}
+
+@media (min-width: 1200px) {
+    .social {
+        top:64%;
+        width: 3vw;  /* Adjust the width for larger screens */
+    }
+
+    .social i {
+        font-size: 3vw;  /* Decrease the font size for larger screens */
+        margin-bottom: 1vh;  /* Adjust spacing for larger screens */
+    }
+}

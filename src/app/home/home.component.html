@@ -1,10 +1,66 @@
-<ul>
-    @for (food of foods; track food.imageUrl) {
-        <li>
-            <a><img src="{{ food.imageUrl }}" alt="" width="100%"></a>
-        </li>
-    } @empty {
-        <div class="center-align">No Food found..</div>       
-    }
-   
-</ul>
+<div class="home-container">
+    <div class="mobile-search-content" [ngClass]="{'fixed': isFixed}">
+        <div class="mobile-searchbar">
+            <div class="search-box-container">
+                <input type="text" class="search-box" placeholder="Search Item" />
+                <i class="fa fa-search"></i>
+            </div>
+            <i class="fa fa-solid fa-sliders filter-by" mat-button (click)="openFormDialog()"></i>
+        </div>
+    </div> 
+    <section class="tag">
+        <app-tag [sliderCount]="6" (imageClick)="onImgCick($event)" [h3Class]="h3Class"></app-tag>
+    </section> 
+    <app-search-box (searchTerm)="onSearchTermChanged($event)"></app-search-box>
+
+    <div class="home-items">
+        <h1>Popular Cuisines near you</h1>
+        <ul infiniteScroll
+        [infiniteScrollDistance]="2"
+        [infiniteScrollThrottle]="50"
+        (scrolled)="onScroll()">
+            @for (food of foods; track food.imageUrl) {
+                <li>
+                    <a  [routerLink]="['/food-details/',food.food_id]">
+                        <img src="{{ food.imageUrl }}" alt="" width="100%">
+                        <div class="contents">
+                            <div class="basic-info">
+                                <span class="name">
+                                    {{food.name}}
+                                </span>
+                                <span class="favorite {{ food.favorite?'':'not'}}">
+                                    &#9829;
+                                </span>
+                            </div>
+                            <star-rating [starType]="'svg'" 
+                               [rating]="food.star" 
+                              [showHalfStars]="true" 
+                              labelPosition="left" 
+                              direction="ltr" 
+                              size="medium" 
+                              [readOnly]="true"></star-rating>
+                              <!--  labelText="{{food.star}}"-->
+                             <div class="more-details">
+                                <div class="cooking-time">
+                                    <i class="fa fa-clock-o"></i>  {{food.cookingTime}} Min
+                                </div>
+                                <div class="price">
+                                    <i class="fa fa-credit-card" aria-hidden="true"></i>
+                                     {{food.price}} <i class="fa fa-eur"></i>
+                                </div>
+                             </div>
+                            <div class="origins">
+                                @for (origin of food.origins; track origin) {
+                                    <span class=""> {{origin}}</span>
+                                }
+                            </div>
+                           
+                        </div>
+                    </a>
+                </li>
+            } @empty {
+                <div class="center-align">No Food found..</div>       
+            }  
+        </ul>
+    </div>    
+</div>

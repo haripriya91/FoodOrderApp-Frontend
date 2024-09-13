@@ -6,7 +6,7 @@
   <div class="">
     <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig" >
           @for (slide of slides; track slide.imageUrl) {
-              <div ngxSlickItem class="slide-container  slide " [ngClass]="imgType">
+              <div ngxSlickItem class="slide-container  slide " [ngClass]="imgType" (click)="onImgCick(slide.name)">
                 <img src="{{ slide.imageUrl }}" alt="" width="100%">
                 <p>{{ slide.name }}</p>
               </div>

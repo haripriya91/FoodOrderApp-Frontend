@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, Input, EventEmitter, Output } from '@angular/core';
 import { TagsService } from '../services/food/tags.service';
 import { tag } from '../models/tag';
 
@@ -9,8 +9,14 @@ import { tag } from '../models/tag';
 })
 export class TagComponent implements OnInit {
 
-  public imgType ="round";
-  public sliderType ="tagList";
+  //public imgType ="round";
+  //public sliderType ="tagList";
+  @Input() imgType :string = "round";
+  @Input() sliderType :string ="tagList";
+  @Input() sliderCount : number = 4;
+  @Input() h3Class!: string;
+  @Output() imageClick = new EventEmitter<string>();
+
   public tags : tag[] =[];
   private tagService = inject(TagsService);
 
@@ -25,6 +31,10 @@ export class TagComponent implements OnInit {
     this.tagService.getTags().subscribe((tags:tag[]) => {
       this.tags =tags;     
     })
+  }
+
+  onImgCick(tagName :any) {
+    this.imageClick.emit(tagName);
   }
 
   tagSlides =  [
