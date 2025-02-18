@@ -1,0 +1,38 @@
+name: Deploy to S3
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "master" ]
+    
+env:
+  AWS_REGION: us-east-1
+
+permissions:
+  contents: read
+
+jobs:
+  Build and Deploy:
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    # Set up Node.js
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+       with:
+         node-version: 22 
+
+    # Install Dependencies
+    - name: Install Dependencies
+      run: npm install
+
+    # Build Angular Project
+    - name: Build Angular Application
+      run: npm run build -- --configuration=production
+
+    - name: List contents
+      run: ls dist
